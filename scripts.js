@@ -19,3 +19,4 @@ const task2 = { title:prompt("Enter the totle for Task 2:"),
 description:prompt("Enter the description for Task 2:"),
 status:getValidStatus(2)
 };
+const completedTask=[task1,task2].filter(task => task.status === "done");
