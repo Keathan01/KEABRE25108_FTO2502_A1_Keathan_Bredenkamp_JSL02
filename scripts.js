@@ -11,12 +11,22 @@ do{
 } while(!status||!validStatuses.includes(status.toLowerCase()));
 return status.toLowerCase();
 }
+
 const task1 = { title:prompt("Enter the totle for Task 1:"),
 description:prompt("Enter the description for Task 1:"),
 status:getValidStatus(1)
 };
+
 const task2 = { title:prompt("Enter the totle for Task 2:"),
 description:prompt("Enter the description for Task 2:"),
 status:getValidStatus(2)
 };
+
+
 const completedTask=[task1,task2].filter(task => task.status === "done");
+
+if(completedTasks.length>0){
+  console.log("Completed Task:");
+  completedTasks.forEach(task=>{ console.log(`-${task.title}[${task.status}]`);
+  });
+} else{console.log("No task completed,let's get to work!");}
